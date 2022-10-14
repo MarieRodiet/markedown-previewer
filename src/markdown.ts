@@ -1,4 +1,4 @@
-export const defaultMarkdown = `# header
+export const defaultMarkdown: string = `# header
 ## Link:
 [visit google](https://www.google.com)
 ### An Image:

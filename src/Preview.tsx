@@ -6,9 +6,7 @@ type PreviewProps = {
 }
 
 export default function Preview({ toPreview }: PreviewProps) {
-  marked.setOptions({
-    breaks: true,
-  })
+  marked.setOptions({ renderer: new marked.Renderer(), breaks: true, sanitize: true })
   let html = marked.parse(toPreview)
 
   return (
