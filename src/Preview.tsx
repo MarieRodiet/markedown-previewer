@@ -1,13 +1,13 @@
 //@ts-ignore
-import { marked } from 'https://cdn.skypack.dev/marked@4.0.0'
+// import { marked } from 'https://cdn.skypack.dev/marked@4.0.0'
 
 type PreviewProps = {
   toPreview: string
 }
 
 export default function Preview({ toPreview }: PreviewProps) {
-  marked.setOptions({ renderer: new marked.Renderer(), breaks: true, sanitize: true })
-  let html = marked.parse(toPreview)
+  window.marked.setOptions({ renderer: new window.marked.Renderer(), breaks: true, sanitize: true })
+  let html = window.marked.parse(toPreview)
 
   return (
     <section
